@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda Demo: tecnología y accesorios para tu día a día.">
+  <title>Tienda Demo | Tecnología y accesorios</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="index.html" aria-label="Tienda Demo, inicio">
+        <img src="img/logo.svg" alt="" class="brand-logo">
+        <span>Tienda<span class="brand-accent">Demo</span></span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="cart-button" type="button" aria-label="Carrito de compra">
+        Carrito <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div>
+          <p class="eyebrow">TECNOLOGÍA PARA TU DÍA A DÍA</p>
+          <h1>Ideas útiles.<br><span>Buenos productos.</span></h1>
+          <p class="hero-copy">Descubre una selección de accesorios y dispositivos pensados para trabajar, aprender y disfrutar.</p>
+          <a class="primary-button" href="#productos">Ver catálogo <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-card" aria-label="Selección de productos destacados">
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+          <div class="hero-product">⌁</div>
+          <span class="floating-label">Selección de temporada</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="productos">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NUESTRO CATÁLOGO</p>
+          <h2>Productos destacados</h2>
+        </div>
+        <label class="search-box">
+          <span class="sr-only">Buscar productos</span>
+          <input id="product-search" type="search" placeholder="Buscar producto...">
+          <span aria-hidden="true">⌕</span>
+        </label>
+      </div>
+
+      <div class="filters" aria-label="Filtrar productos">
+        <button class="filter-button active" type="button" data-filter="todos">Todos</button>
+        <button class="filter-button" type="button" data-filter="audio">Audio</button>
+        <button class="filter-button" type="button" data-filter="informatica">Informática</button>
+        <button class="filter-button" type="button" data-filter="accesorios">Accesorios</button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-category="audio" data-name="Auriculares inalámbricos">
+          <div class="product-art art-headphones"><span>♫</span></div>
+          <div class="product-info">
+            <p class="product-category">AUDIO</p>
+            <h3>Auriculares inalámbricos</h3>
+            <p class="product-description">Sonido nítido y comodidad para todo el día.</p>
+            <div class="product-bottom"><strong>39,90 €</strong><button class="add-button" type="button" data-product="Auriculares inalámbricos">Añadir +</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="informatica" data-name="Teclado compacto">
+          <div class="product-art art-keyboard"><span>⌨</span></div>
+          <div class="product-info">
+            <p class="product-category">INFORMÁTICA</p>
+            <h3>Teclado compacto</h3>
+            <p class="product-description">Diseño minimalista para tu espacio de trabajo.</p>
+            <div class="product-bottom"><strong>49,00 €</strong><button class="add-button" type="button" data-product="Teclado compacto">Añadir +</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="accesorios" data-name="Mochila urbana">
+          <div class="product-art art-backpack"><span>▱</span></div>
+          <div class="product-info">
+            <p class="product-category">ACCESORIOS</p>
+            <h3>Mochila urbana</h3>
+            <p class="product-description">Ligera, práctica y preparada para acompañarte.</p>
+            <div class="product-bottom"><strong>34,50 €</strong><button class="add-button" type="button" data-product="Mochila urbana">Añadir +</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="audio" data-name="Altavoz portátil">
+          <div class="product-art art-speaker"><span>◖))</span></div>
+          <div class="product-info">
+            <p class="product-category">AUDIO</p>
+            <h3>Altavoz portátil</h3>
+            <p class="product-description">Tu música favorita, en casa o donde quieras.</p>
+            <div class="product-bottom"><strong>27,90 €</strong><button class="add-button" type="button" data-product="Altavoz portátil">Añadir +</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="informatica" data-name="Ratón ergonómico">
+          <div class="product-art art-mouse"><span>⌖</span></div>
+          <div class="product-info">
+            <p class="product-category">INFORMÁTICA</p>
+            <h3>Ratón ergonómico</h3>
+            <p class="product-description">Precisión y comodidad para tus tareas.</p>
+            <div class="product-bottom"><strong>19,95 €</strong><button class="add-button" type="button" data-product="Ratón ergonómico">Añadir +</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="accesorios" data-name="Botella térmica">
+          <div class="product-art art-bottle"><span>♧</span></div>
+          <div class="product-info">
+            <p class="product-category">ACCESORIOS</p>
+            <h3>Botella térmica</h3>
+            <p class="product-description">Mantén tu bebida a la temperatura ideal.</p>
+            <div class="product-bottom"><strong>16,90 €</strong><button class="add-button" type="button" data-product="Botella térmica">Añadir +</button></div>
+          </div>
+        </article>
+      </div>
+      <p id="no-results" class="no-results" hidden>No se han encontrado productos.</p>
+      <p id="cart-message" class="cart-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="about-section" id="nosotros">
+      <div class="container about-content">
+        <div>
+          <p class="eyebrow">SOBRE TIENDA DEMO</p>
+          <h2>Una tienda creada para aprender.</h2>
+        </div>
+        <p>Este sitio es una aplicación web estática de ejemplo. Sus archivos HTML, CSS y JavaScript se pueden versionar en Git y desplegar en un servidor Apache.</p>
+      </div>
+    </section>
+
+    <section class="contact-section container" id="contacto">
+      <p class="eyebrow">¿NECESITAS AYUDA?</p>
+      <h2>Estamos aquí para ayudarte.</h2>
+      <p>Escríbenos a <a href="mailto:hola@tiendademo.local">hola@tiendademo.local</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>© 2026 Tienda Demo</span>
+      <span>Proyecto educativo · Despliegue de Aplicaciones Web</span>
+    </div>
+  </footer>
+</body>
+</html>
